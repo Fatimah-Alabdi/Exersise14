@@ -37,7 +37,7 @@ public class EventController {
 
    }
    @DeleteMapping("/delete/{index}")
-   public ResponseEntity deleteEvent(int index){
+   public ResponseEntity deleteEvent(@PathVariable int index){
         events.remove(index);
         return ResponseEntity.status(200).body(new ApiRespons("delete success"));
    }
