@@ -53,7 +53,7 @@ public class TrackerController {
             projects.get(index).setStatus("Completed");
             return ResponseEntity.status(200).body(new ApiRespons("projects status changed successfully"));
         }
-return ResponseEntity.status(400).body(new ApiRespons("not change"));
+return ResponseEntity.status(200).body(new ApiRespons("project is complete"));
     }
     @GetMapping("/search/{title}")
     public ResponseEntity searchProject(@PathVariable String title) {
